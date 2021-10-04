@@ -7,9 +7,8 @@ The script reads the first whitespace-separated column from an `addons` file and
 Example file:
 (text after the first column is ignored)
 ```
-1554 AssistRapidRiding
-1360 CombatMetrics
-1736 Constellations
 1346 DolgubonsLazyWritCreator
+1360 CombatMetrics
+1536 ActionDurationReminder
 2138 DressingRoom
 ```
