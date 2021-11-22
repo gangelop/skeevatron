@@ -1,6 +1,6 @@
 #!/bin/bash
 
-addondir="$HOME/Documents/Elder Scrolls Online/live/AddOns/"
+addondir="$HOME/documents/Elder Scrolls Online/live/AddOns/"
 addonslist="$addondir/addons"
 downloadpage="https://cdn.esoui.com/downloads/file"
 
