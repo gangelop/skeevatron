@@ -16,4 +16,4 @@ while IFS= read -r id; do
     finalurl="$downloadpage""$id"/
     dlandunzip "$finalurl"
     sleep 0.5 # be nice
-done < <(awk '{print $1}' "$addonslist")
+done < <(cut -f1 -d' ' "$addonslist")
