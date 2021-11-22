@@ -2,25 +2,7 @@
 
 addondir="$HOME/documents/Elder Scrolls Online/live/AddOns/"
 addonslist="$addondir/addons"
-downloadpage="https://www.esoui.com/downloads/download"
-
-# expects $1 == id
-# prints finalurl
-function getfinalurl() {
-    awk 'BEGIN{
-    RS="</a>"
-    IGNORECASE=1
-    }
-    /Problems/ {
-      for(o=1;o<=NF;o++){
-        if ( $o ~ /href/){
-          gsub(/.*href=\042/,"",$o)
-          gsub(/\042.*/,"",$o)
-          print $(o)
-        }
-      }
-    }' <(curl -s "$downloadpage""$1")
-}
+downloadpage="https://cdn.esoui.com/downloads/file"
 
 # expects $1 == finalurl
 function dlandunzip() {
@@ -31,7 +13,7 @@ function dlandunzip() {
 }
 
 while IFS= read -r id; do
-    finalurl=$(getfinalurl "$id")
+    finalurl="$downloadpage""$id"/
     dlandunzip "$finalurl"
     sleep 0.5 # be nice
 done < <(awk '{print $1}' "$addonslist")
