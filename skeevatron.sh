@@ -4,7 +4,6 @@ addondir="$HOME/documents/Elder Scrolls Online/live/AddOns/"
 addonslist="$addondir/addons"
 downloadpage="https://cdn.esoui.com/downloads/file"
 
-# expects $1 == finalurl
 function dlandunzip() {
     url="$1"
     f=$(mktemp /tmp/skeevatron.XXXXXX)
@@ -13,7 +12,6 @@ function dlandunzip() {
 }
 
 while IFS= read -r id; do
-    finalurl="$downloadpage""$id"/
-    dlandunzip "$finalurl"
+    dlandunzip "${downloadpage}${id}/"
     sleep 0.2 # be nice
 done < <(cut -f1 -d' ' "$addonslist")
