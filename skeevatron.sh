@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 addondir="$HOME/documents/Elder Scrolls Online/live/AddOns/"
 addonslist="$addondir/addons"
