@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-addondir="$HOME/documents/Elder Scrolls Online/live/AddOns/"
+[ -n "$XDG_CONFIG_HOME" ] && configdir="$XDG_CONFIG_HOME/skeevatron"
+[ -z "$configdir" ] && configdir="$HOME/.config/skeevatron"
+
+[ -e "$configdir" ] && source "$configdir"
+
+[ -z "$addondir" ] && addondir="$HOME/documents/Elder Scrolls Online/live/AddOns/"
 addonslist="$addondir/addons"
 downloadpage="https://cdn.esoui.com/downloads/file"
 
