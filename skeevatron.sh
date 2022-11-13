@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-[ -n "$XDG_CONFIG_HOME" ] && configdir="$XDG_CONFIG_HOME/skeevatron"
-[ -z "$configdir" ] && configdir="$HOME/.config/skeevatron"
-
+configdir="$HOME/.config/skeevatron"
 [ -e "$configdir" ] && source "$configdir"
 
 [ -z "$addondir" ] && addondir="$HOME/documents/Elder Scrolls Online/live/AddOns/"
