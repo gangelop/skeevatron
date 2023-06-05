@@ -3,7 +3,7 @@
 configdir="$HOME/.config/skeevatron"
 [ -e "$configdir" ] && source "$configdir"
 
-[ -z "$addondir" ] && addondir="$HOME/documents/Elder Scrolls Online/live/AddOns/"
+[ -z "$addondir" ] && addondir="$HOME/Documents/Elder Scrolls Online/live/AddOns/"
 addonslist="$addondir/addons"
 downloadpage="https://cdn.esoui.com/downloads/file"
 
