@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+which unzip > /dev/null || exit 1
+which curl > /dev/null || exit 1
+
 configdir="$HOME/.config/skeevatron"
 [ -e "$configdir" ] && source "$configdir"
 
